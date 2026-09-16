@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Tin Kolar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">TIN<span class="accent">KOLAR</span></a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link" aria-current="page">Projects</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-section container">
+    <p class="eyebrow">Everything I've made</p>
+    <h1 class="section-heading">Projects</h1>
+
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="unreal">Unreal</button>
+      <button class="filter-tab" data-filter="unity">Unity</button>
+      <button class="filter-tab" data-filter="app">Apps</button>
+      <button class="filter-tab" data-filter="3d">3D</button>
+    </div>
+
+    <div class="project-grid" id="projectsGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Tin Kolar</p>
+    <div class="socials">
+      <a href="mailto:kolar.tin@gmail.com">Email</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">ArtStation</a>
+    </div>
+  </div>
+</footer>
+
+<script src="data/projects-data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

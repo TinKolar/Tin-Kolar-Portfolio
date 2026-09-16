@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin Kolar — Game Developer & 3D Artist</title>
+<meta name="description" content="Portfolio of Tin Kolar — Unreal, Unity, and 3D art work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">TIN<span class="accent">KOLAR</span></a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div>
+      <p class="eyebrow">Game Developer &amp; 3D Artist</p>
+      <h1>I build worlds in <span class="accent">Unreal</span> and <span class="accent">Unity</span>, and the art that fills them.</h1>
+      <p class="lead">Replace this with a short, punchy line about what you do and what kind of work you want to be hired for.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+      <span class="tag">[ HERO_VISUAL_PLACEHOLDER ]</span>
+    </div>
+  </section>
+
+  <section class="skills-strip">
+    <div class="container skills-row">
+      <span class="skill-pill">Unreal Engine 5</span>
+      <span class="skill-pill">Unity</span>
+      <span class="skill-pill">C++</span>
+      <span class="skill-pill">C#</span>
+      <span class="skill-pill">Blender</span>
+      <span class="skill-pill">Substance Painter</span>
+      <span class="skill-pill">Gameplay Systems</span>
+      <span class="skill-pill">Tools Programming</span>
+    </div>
+  </section>
+
+  <section class="page-section container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="section-heading">Featured Projects</h2>
+      </div>
+      <a href="projects.html" class="btn btn-outline">All Projects →</a>
+    </div>
+    <div class="project-grid" id="featuredGrid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Tin Kolar</p>
+    <div class="socials">
+      <a href="mailto:kolar.tin@gmail.com">Email</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">ArtStation</a>
+    </div>
+  </div>
+</footer>
+
+<script src="data/projects-data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#12151b"/>
+      <stop offset="100%" stop-color="#1a1e26"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g)"/>
+  <g stroke="#262b35" stroke-width="1">
+    <path d="M0 90 H800 M0 180 H800 M0 270 H800 M0 360 H800"/>
+    <path d="M100 0 V450 M300 0 V450 M500 0 V450 M700 0 V450"/>
+  </g>
+  <rect x="590" y="90" width="120" height="220" rx="14" fill="none" stroke="#4fd1ff" stroke-width="1.5" opacity="0.7"/>
+  <text x="60" y="240" font-family="monospace" font-size="34" fill="#eef0f3">POCKET TRACKER</text>
+  <text x="60" y="270" font-family="monospace" font-size="14" fill="#5b6270">MOBILE APP · PLACEHOLDER THUMBNAIL</text>
+</svg>
