@@ -15,97 +15,58 @@
     youtubeId   - just the ID from the YouTube URL, e.g. https://youtube.com/watch?v=XXXXXXXX -> "XXXXXXXX"
                   leave as "" if you don't have a video yet
     model3d     - path to a .glb file for an interactive 3D viewer, or null if none
-    images      - array of screenshot paths for the gallery on the project page
-    links       - any of github / itch / download, omit ones you don't have
+    images      - array of screenshot paths for the gallery. Either a plain path,
+                  or { src: "path", caption: "text under the image" }
+    links       - any of github / itch / download / artstation, omit ones you don't have
 */
 
 const PROJECTS = [
   {
-    id: "neon-drift",
-    title: "Neon Drift",
-    category: "unreal",
-    year: 2025,
-    featured: true,
-    tags: ["Solo Project", "C++", "Unreal Engine 5"],
-    thumbnail: "media/placeholder/thumb-neon-drift.svg",
-    youtubeId: "",
-    images: [
-      "media/placeholder/shot-generic-1.svg",
-      "media/placeholder/shot-generic-2.svg"
-    ],
-    model3d: null,
-    description: "A short one-line hook about the project for the card and top of the detail page.",
-    role: "Solo Developer",
-    tools: "Unreal Engine 5, C++, Blender",
-    writeup: [
-      "Replace this with a couple of paragraphs about the project: what it is, what problem it solves or what experience it delivers.",
-      "Then talk about your specific contribution and a technical challenge you solved — this is the part recruiters actually read."
-    ],
-    links: { github: "#", itch: "#" }
-  },
-  {
-    id: "orbit-forge",
-    title: "Orbit Forge",
-    category: "unity",
-    year: 2024,
-    featured: true,
-    tags: ["Team Project", "C#", "Unity"],
-    thumbnail: "media/placeholder/thumb-orbit-forge.svg",
-    youtubeId: "",
-    images: [
-      "media/placeholder/shot-generic-1.svg",
-      "media/placeholder/shot-generic-2.svg"
-    ],
-    model3d: null,
-    description: "A short one-line hook about the project for the card and top of the detail page.",
-    role: "Gameplay Programmer",
-    tools: "Unity, C#, FMOD",
-    writeup: [
-      "Replace this with a couple of paragraphs about the project.",
-      "Team size, your role, and a technical highlight go well here."
-    ],
-    links: { github: "#" }
-  },
-  {
-    id: "relic-bust",
-    title: "Relic Bust",
-    category: "3d",
-    year: 2025,
-    featured: true,
-    tags: ["Environment Art", "Blender", "Substance Painter"],
-    thumbnail: "media/placeholder/thumb-relic-bust.svg",
-    youtubeId: "",
-    images: [
-      "media/placeholder/shot-generic-1.svg"
-    ],
-    model3d: null,
-    description: "A rotatable 3D model piece — once you add a .glb path above, this becomes an interactive viewer.",
-    role: "3D Artist",
-    tools: "Blender, Substance Painter",
-    writeup: [
-      "Replace this with the story behind the model: reference, sculpting/retopo/bake/texture pipeline, poly count, etc."
-    ],
-    links: { artstation: "#" }
-  },
-  {
-    id: "pocket-tracker",
-    title: "Pocket Tracker",
+    id: "slippy-rails",
+    title: "Slippy Rails",
     category: "app",
-    year: 2024,
-    featured: false,
-    tags: ["Mobile", "Unity"],
-    thumbnail: "media/placeholder/thumb-pocket-tracker.svg",
+    year: 2025,
+    featured: true,
+    tags: ["Mobile", "Unity", "3D"],
+    thumbnail: "media/slippy-rails/thumb.jpg",
     youtubeId: "",
     images: [
-      "media/placeholder/shot-generic-1.svg"
+      { src: "media/slippy-rails/title-screen.jpg", caption: "Main menu with coin balance and in-game shop" },
+      { src: "media/slippy-rails/gameplay-start.jpg", caption: "Round start — lives, banana counter and power-up slots" },
+      { src: "media/slippy-rails/gameplay-night.jpg", caption: "Night run: dodging a rocket while collecting bananas" },
+      { src: "media/slippy-rails/loading-screen.jpg", caption: "Loading screen" }
     ],
     model3d: null,
-    description: "A short one-line hook about the project for the card and top of the detail page.",
-    role: "Developer",
-    tools: "Unity, C#",
+    description: "A mobile arcade game where you run the rails, dodge hazards and cash in bananas.",
+    role: "Solo Developer",
+    tools: "Unity, C#, Blender",
     writeup: [
-      "Replace this with a couple of paragraphs about the project."
+      "Slippy Rails is a mobile arcade game set in a stylised jungle. You move between train tracks, collect bananas, and survive incoming hazards for as long as you can. Bananas convert into coins, which feed a shop and a set of power-ups.",
+      "Built as a full release-ready package rather than a prototype: it ships with a main menu, a loading flow, a persistent coin economy, a shop, three collectible power-ups, and a lives system, all driven by touch controls designed for one-handed play."
     ],
-    links: { download: "#" }
+    links: {}
+  },
+  {
+    id: "tank-trouble",
+    title: "Tank Trouble Recreation",
+    category: "unity",
+    year: 2026,
+    featured: true,
+    tags: ["Unity 6", "C#", "Local Multiplayer", "2D"],
+    thumbnail: "media/tank-trouble/thumb.jpg",
+    youtubeId: "",
+    images: [
+      { src: "media/tank-trouble/editor-level-blockout.jpg", caption: "Development shot: arena blockout in the Unity scene view, with tank spawn points" },
+      { src: "media/tank-trouble/editor-arena-scene.jpg", caption: "Development shot: a second arena layout and the scene's manager objects" }
+    ],
+    model3d: null,
+    description: "A 2D local-multiplayer tank duel built in Unity 6, recreating the browser classic.",
+    role: "Solo Developer",
+    tools: "Unity 6, C#, TextMesh Pro",
+    writeup: [
+      "A recreation of the browser game Tank Trouble: two or more players share a keyboard and fight through a maze arena, firing bouncing shells that are just as likely to kill you as your opponent.",
+      "The project is structured around a full scene flow rather than a single playable level — a loader, a main menu, a player-select screen, a waiting lobby, and multiple arena scenes, coordinated by dedicated spawn and match-end managers."
+    ],
+    links: {}
   }
 ];

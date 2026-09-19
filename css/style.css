@@ -425,6 +425,8 @@ section.page-section { padding: 4.5rem 0; }
 
 .media-embed iframe, .media-embed model-viewer { width: 100%; height: 100%; border: 0; }
 
+.media-embed .media-fallback { width: 100%; height: 100%; object-fit: cover; }
+
 .placeholder-box {
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
@@ -443,11 +445,22 @@ section.page-section { padding: 4.5rem 0; }
   margin: 2.5rem 0;
 }
 
+.gallery-grid figure { margin: 0; }
+
 .gallery-grid img {
+  width: 100%;
   border-radius: 8px;
   border: 1px solid var(--border);
   aspect-ratio: 16/10;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--bg-elevated-2);
+}
+
+.gallery-grid figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  margin-top: 0.5rem;
 }
 
 .writeup { max-width: 70ch; color: var(--text-dim); margin-bottom: 2rem; }

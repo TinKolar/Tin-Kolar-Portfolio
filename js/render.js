@@ -73,7 +73,9 @@ function renderProjectDetail() {
     ? `<iframe src="https://www.youtube.com/embed/${project.youtubeId}" title="${project.title} video" allowfullscreen loading="lazy"></iframe>`
     : project.model3d
       ? `<model-viewer src="${project.model3d}" camera-controls auto-rotate shadow-intensity="1" style="background:var(--bg-elevated-2)"></model-viewer>`
-      : `<div class="placeholder-box">No video or 3D model added yet.<br>Set "youtubeId" or "model3d" for this project in data/projects-data.js.</div>`;
+      : project.thumbnail
+        ? `<img src="${project.thumbnail}" alt="${project.title}" class="media-fallback">`
+        : `<div class="placeholder-box">No media added yet.<br>Set "youtubeId", "model3d" or "thumbnail" for this project in data/projects-data.js.</div>`;
 
   const linksHTML = Object.entries(project.links || {})
     .map(([label, url]) => `<a class="btn btn-outline" href="${url}" target="_blank" rel="noopener">${label}</a>`)
@@ -94,7 +96,14 @@ function renderProjectDetail() {
 
       ${project.images && project.images.length ? `
         <div class="gallery-grid reveal">
-          ${project.images.map((src) => `<img src="${src}" alt="${project.title} screenshot" loading="lazy">`).join("")}
+          ${project.images.map((img) => {
+            const src = typeof img === "string" ? img : img.src;
+            const caption = typeof img === "string" ? "" : img.caption;
+            return `<figure>
+              <img src="${src}" alt="${caption || project.title + " screenshot"}" loading="lazy">
+              ${caption ? `<figcaption>${caption}</figcaption>` : ""}
+            </figure>`;
+          }).join("")}
         </div>` : ""}
 
       <div class="writeup reveal">

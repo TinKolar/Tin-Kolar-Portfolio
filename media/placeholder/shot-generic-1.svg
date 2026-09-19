@@ -1,8 +1,0 @@
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="500" fill="#12151b"/>
-  <g stroke="#262b35" stroke-width="1">
-    <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800"/>
-    <path d="M133 0 V500 M266 0 V500 M400 0 V500 M533 0 V500 M666 0 V500"/>
-  </g>
-  <text x="50%" y="50%" font-family="monospace" font-size="20" fill="#5b6270" text-anchor="middle">SCREENSHOT PLACEHOLDER</text>
-</svg>
