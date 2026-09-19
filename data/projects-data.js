@@ -31,18 +31,18 @@ const PROJECTS = [
     thumbnail: "media/slippy-rails/thumb.jpg",
     youtubeId: "",
     images: [
-      { src: "media/slippy-rails/title-screen.jpg", caption: "Main menu with coin balance and in-game shop" },
-      { src: "media/slippy-rails/gameplay-start.jpg", caption: "Round start — lives, banana counter and power-up slots" },
-      { src: "media/slippy-rails/gameplay-night.jpg", caption: "Night run: dodging a rocket while collecting bananas" },
+      { src: "media/slippy-rails/title-screen.jpg", caption: "Main menu, with coin balance and shop" },
+      { src: "media/slippy-rails/gameplay-start.jpg", caption: "Round start" },
+      { src: "media/slippy-rails/gameplay-night.jpg", caption: "Night level" },
       { src: "media/slippy-rails/loading-screen.jpg", caption: "Loading screen" }
     ],
     model3d: null,
-    description: "A mobile arcade game where you run the rails, dodge hazards and cash in bananas.",
+    description: "A hypercasual mobile game about throwing bananas onto the rails to stop the trains.",
     role: "Solo Developer",
-    tools: "Unity, C#, Blender",
+    tools: "Unity, C#",
     writeup: [
-      "Slippy Rails is a mobile arcade game set in a stylised jungle. You move between train tracks, collect bananas, and survive incoming hazards for as long as you can. Bananas convert into coins, which feed a shop and a set of power-ups.",
-      "Built as a full release-ready package rather than a prototype: it ships with a main menu, a loading flow, a persistent coin economy, a shop, three collectible power-ups, and a lives system, all driven by touch controls designed for one-handed play."
+      "A hypercasual mobile game set in a stylised jungle. You throw bananas onto the tracks so the trains slip on them — the goal is to stop them getting to the other side.",
+      "Made for landscape play. Includes a main menu, a coin economy with a shop, three power-ups, and a lives system."
     ],
     links: {}
   },
@@ -64,8 +64,8 @@ const PROJECTS = [
     role: "Solo Developer",
     tools: "Unity 6, C#, TextMesh Pro",
     writeup: [
-      "A recreation of the browser game Tank Trouble: two or more players share a keyboard and fight through a maze arena, firing bouncing shells that are just as likely to kill you as your opponent.",
-      "The project is structured around a full scene flow rather than a single playable level — a loader, a main menu, a player-select screen, a waiting lobby, and multiple arena scenes, coordinated by dedicated spawn and match-end managers."
+      "A recreation of the browser game Tank Trouble. Players share one keyboard and duel in a maze arena, firing shells that bounce off the walls.",
+      "Includes a main menu, a player-select screen and several arena layouts."
     ],
     links: {}
   }
